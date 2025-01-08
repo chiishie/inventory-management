@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Dashboard from "./dashboard/page";
+import DashboardWrapper from "./dashboard/dashboardWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,9 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* You can place additional <meta> tags or <link> tags here */}
       </head>
       <body>
-        {/* Global providers or navigation could go here */}
-        {children}
+       <DashboardWrapper>{children}</DashboardWrapper>
       </body>
     </html>
   );
 }
+// everything that is continous (in all pages) goes here
